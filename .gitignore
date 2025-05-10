@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+.env
+npm-debug.log
+.DS_Store
+*.log
+
+# VSCode (si usas este editor)
+.vscode/
+
+# Archivos temporales del sistema operativo
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Archivos de empaquetado para Lambda (si lo haces zip)
+*.zip
