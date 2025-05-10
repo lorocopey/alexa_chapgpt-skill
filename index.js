@@ -6,9 +6,12 @@ const LaunchRequestHandler = {
     return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
   },
   handle(handlerInput) {
+    const speechText = 'Bienvenido a chapi asistente. Pregúntame lo que quieras.';
+
     return handlerInput.responseBuilder
-      .speak('Hola, soy Chapi. ¿Qué quieres saber?')
-      .reprompt('¿Tienes otra pregunta?')
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('Chapi, tu asistente', speechText)
       .getResponse();
   }
 };
