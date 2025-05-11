@@ -1,7 +1,6 @@
 const Alexa = require('ask-sdk-core');
 
 const { SessionEndedRequest, HelpIntent, CancelAndStopIntentHandler, UnhandledIntent } = require('./intents/AmazonIntents');
-const { HelloWorldIntentHandler } = require('./intents/HelloWorldIntent');
 const { LaunchRequest } = require('./intents/LaunchIntents');
 const { ChatGPTIntentHandler } = require('./intents/ChatGptIntents');
 
@@ -10,7 +9,6 @@ const createSkill = () => {
     return skillbuilder.addRequestHandlers(
         LaunchRequest,
         ChatGPTIntentHandler,
-        HelloWorldIntentHandler,
         SessionEndedRequest,
         HelpIntent,
         CancelAndStopIntentHandler,
