@@ -5,7 +5,7 @@ const { LaunchRequest } = require('./intents/LaunchIntents');
 const { ChatGPTIntentHandler } = require('./intents/ChatGptIntents');
 
 const createSkill = () => {
-    const skillbuilder = Alexa.SkillBuilders.custom();
+    const skillbuilder = Alexa.SkillBuilders.custom();3
     return skillbuilder.addRequestHandlers(
         LaunchRequest,
         ChatGPTIntentHandler,
