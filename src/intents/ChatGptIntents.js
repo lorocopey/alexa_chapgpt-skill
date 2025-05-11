@@ -1,5 +1,6 @@
 const ChatGPTIntentHandler = {
     canHandle(handlerInput) {
+        console.log('ChatGPTIntentHandler', handlerInput);
         const { request } = handlerInput.requestEnvelope;
         console.log('ChatGPTIntentHandler', request);
         return request.type === 'IntentRequest' && request.intent.name === 'ChatGPTIntent';
