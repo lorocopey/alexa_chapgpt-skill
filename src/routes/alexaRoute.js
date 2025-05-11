@@ -1,14 +1,13 @@
-const express = require('express');
+const { Router } = require('express');
+const router = Router();
 const { ExpressAdapter } = require('ask-sdk-express-adapter');
 
 const { createSkill } = require('../skillHandler');
-
-const alexaApp = express();
 
 const skill = createSkill();
 
 const adapter = new ExpressAdapter(skill, false, false);
 
-alexaApp.post('/', adapter.getRequestHandlers());
+router.post('/', adapter.getRequestHandlers());
 
-module.exports = alexaApp;
+module.exports = router;
