@@ -29,6 +29,7 @@ const ChatGPTIntentHandler = {
 
         return handlerInput.responseBuilder
             .speak(respuesta)
+            .reprompt('¿Tienes otra pregunta para Chapi?') // Esto mantiene la sesión activa
             .getResponse();
     }
 
