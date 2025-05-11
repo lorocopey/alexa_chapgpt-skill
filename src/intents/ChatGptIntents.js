@@ -30,6 +30,7 @@ const ChatGPTIntentHandler = {
         return handlerInput.responseBuilder
             .speak(respuesta)
             .reprompt('¿Tienes otra pregunta para Chapi?') // Esto mantiene la sesión activa
+            .speak('¿Tienes otra pregunta para Chapi?') // Esto es para que Alexa repita la respuesta
             .getResponse();
     }
 
