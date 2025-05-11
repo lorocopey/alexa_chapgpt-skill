@@ -5,7 +5,7 @@ const { LaunchRequest } = require('./intents/LaunchIntents');
 const { ChatGPTIntentHandler } = require('./intents/ChatGptIntents');
 
 const createSkill = () => {
-    const skillbuilder = Alexa.SkillBuilders.custom();3
+    const skillbuilder = Alexa.SkillBuilders.custom();
     return skillbuilder.addRequestHandlers(
         LaunchRequest,
         ChatGPTIntentHandler,
@@ -15,7 +15,7 @@ const createSkill = () => {
         UnhandledIntent
     )
         .withApiClient(new Alexa.DefaultApiClient())
-        .withCustomUserAgent('prueba/v1')
+        .withCustomUserAgent('chapi asistente')
         .create()
 }
 
